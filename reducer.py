@@ -46,8 +46,8 @@ for line in sys.stdin:
         # to the standart output (stdout)
         # Key and value are seperated by a tab (\t)
         # Line ends with new line (\n)
-        #if count_of_values>114:
-        sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_values))
+        if count_of_values>114:
+            sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_values))
         # Sum of sales starts again with 0
         count_of_values = 0
 
