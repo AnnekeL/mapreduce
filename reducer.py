@@ -41,10 +41,12 @@ for line in sys.stdin:
     # This means the line starts with a new key (key changes e.g. from "Visa" to "Cash")
     # Remember that our keys are sorted
     if previous_key != None and previous_key != key:
+        # if the results county for more than 114 then:
         # Then write the result of the old key (Key=category, Value= Sum of Sales)
         # to the standart output (stdout)
         # Key and value are seperated by a tab (\t)
         # Line ends with new line (\n)
+        #if count_of_values>114:
         sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_values))
         # Sum of sales starts again with 0
         count_of_values = 0
